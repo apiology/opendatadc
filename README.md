@@ -39,6 +39,19 @@ To create a test user, run `paster sysadmin add admin -c /etc/ckan/default/devel
 
 To create test data, run `paster create-test-data -c /etc/ckan/default/development.ini`.
 
+Alternatively, to install some real data:
+
+   ```sh
+   mkdir dataoutput
+   pip install ckanapi
+
+   ckanapi dump organizations participants -O organizations.jsonl.gz -z -p 4 -r http://data.codefordc.org/
+   ckanapi load organizations -I organizations.jsonl.gz -z -c /etc/ckan/default/development.ini
+
+   ckanapi dump datasets shotspotter-gun-data-2006-2012 -O datasets.jsonl.gz -z -p 4 -r http://data.codefordc.org/
+   ckanapi load datasets -I datasets.jsonl.gz -z -p 3 -c /etc/ckan/default/development.ini
+   ```
+
 To exit this prompt, run `exit`.
 
 ## Local development
