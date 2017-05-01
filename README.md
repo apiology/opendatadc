@@ -8,8 +8,9 @@ This repository includes the CKAN theme used by data.codefordc.org as well any c
 
 ### Prerequisites
 
-- Git
-- [Docker](https://docs.docker.com/engine/installation/) for your operating system
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Docker](https://docs.docker.com/engine/installation/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### Cloning the repository
 
@@ -68,4 +69,4 @@ Feel free to contribute here or join us on [Waffle.io](https://waffle.io/codefor
 4. Grab the latest from master `git pull origin`
 5. Run `python setup.py develop`
 6. Run `sudo service apache2 reload`
-7. Veriy [Data Portal](data.codefordc.org) is reachable and changes are there
+7. Verify [Data Portal](http://data.codefordc.org) is reachable and changes are there
